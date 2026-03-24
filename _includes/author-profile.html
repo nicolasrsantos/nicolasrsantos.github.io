@@ -171,6 +171,12 @@
       {% if author.zhihu %}
       <li><a href="https://www.zhihu.com/people/{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
       {% endif %}      
+      <!-- Custom links -->
+      {% if author.links %}
+        {% for link in author.links %}
+          <li><a href="{{ link.url }}"><i class="{{ link.icon }} icon-pad-right" aria-hidden="true"></i>{{ link.label }}</a></li>
+        {% endfor %}
+      {% endif %}
     </ul>
   </div>
 </div>
