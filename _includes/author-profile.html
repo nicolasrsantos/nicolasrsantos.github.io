@@ -7,11 +7,13 @@
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
+    <a href="https://www.google.com/maps/search/?api=1&query=Ponte+Lu%C3%ADs+I,+Porto,+Portugal" target="_blank" rel="noopener noreferrer">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
     {% else %}
     	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
     {% endif %}
+    </a>
   </div>
 
   <div class="author__content">
